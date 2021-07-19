@@ -1,0 +1,37 @@
+<!--
+You need to change the background color on "div1" following the selected radio button
+You cannot delete or change any element of the HTML but you can add the HTML
+
+Good Luck :D
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>background-color</title>
+  <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+</head>
+
+<body>
+  <h3>Change background color to:</h3>
+  <div id="div1">
+    <p>
+      <input type="radio" name="color" id="red" value="red" onChange="changeColor(this)"/>Red<br/>
+      <input type="radio" name="color" id="pink" value="pink" onChange="changeColor(this)" />Pink<br/>
+      <input type="radio" name="color" id="yellow" value="yellow" onChange="changeColor(this)"/>Yellow<br/>
+    </p>
+  </div>
+</body>
+</html>
+
+<script>
+function changeColor(element) {
+  var div = document.getElementById('div1');
+  if (element.id == 'red' && element.checked) {
+    div.style.backgroundColor = 'red';
+  } else if (element.id == 'pink' && element.checked) {
+    div.style.backgroundColor = 'pink';
+  }else if (element.id == 'yellow' && element.checked) {
+    div.style.backgroundColor = 'yellow';
+  }
+}
+</script>

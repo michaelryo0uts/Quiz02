@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body >
+
+  <h3>Change background color to:</h3>
+  <div id="div1">
+<input type="radio" name="color" id="red" value="red" onchange="changeColour('r')"/>Red<br/>
+<input type="radio" name="color" id="pink" value="pink" onchange="changeColour('p')" />Pink<br/>
+<input type="radio" name="color" id="yellow" value="yellow" onchange="changeColour('b')"/>Yellow<br/>
+</div>
+</body>
+</html>
+<script>
+function changeColour(value)
+{
+    var color = document.getElementById("div1");
+    switch(value)
+    {
+        case 'b':
+            color = "#FFFF00";
+        break;
+        case 'r':
+            color = "#DC143C";
+        break;
+        case 'p':
+            color = "#FF00FF";
+        break;
+    }
+    document.getElementById("div1").style.backgroundColor = color;
+}</script>
